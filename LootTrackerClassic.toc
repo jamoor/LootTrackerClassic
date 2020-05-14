@@ -1,0 +1,6 @@
+## Interface: 11304
+## Title: LootTackerClassic
+## Author: James Moore
+## Version: 1.0
+
+scripts/ZoneManager.lua
