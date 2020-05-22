@@ -2,5 +2,12 @@
 ## Title: LootTackerClassic
 ## Author: James Moore
 ## Version: 1.0
+## Notes: Tracks loot for the current Instance you are in.
+## DefaultState: enabled
 
+## Module Imports ##
+scripts/Utilities.lua
 scripts/ZoneManager.lua
+
+## Init ##
+scripts/init.lua
