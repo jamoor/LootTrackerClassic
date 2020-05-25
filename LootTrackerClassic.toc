@@ -7,6 +7,8 @@
 
 ## Module Imports ##
 scripts/Utilities.lua
+scripts/BossCell.lua
+scripts/ListTracker.lua
 scripts/ZoneManager.lua
 
 ## Init ##
