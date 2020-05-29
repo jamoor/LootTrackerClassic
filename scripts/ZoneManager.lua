@@ -25,9 +25,18 @@ function ZoneManager:toggleListTracker(event, ...)
     local inInstance = IsInInstance()
     local zoneName = GetInstanceInfo()
     if inInstance then
-        ListTracker:initializeTracker(zoneName, { "Your Mom", zoneName })
+        ListTracker:initializeTracker(zoneName, { 
+            { bossName = "Not In An Instance",
+              loot = { 24282 } }, 
+            { bossName = "Hakkar",
+              loot = { 24102 } },
+            { bossName = zoneName },
+        })
     else 
-        ListTracker:initializeTracker(zoneName, { "Not In An Instance", "Your Dad", zoneName})
+        ListTracker:initializeTracker(zoneName, { 
+            { bossName = "Your Mom" }, 
+            { bossName = zoneName },
+        })
     end
 end
 

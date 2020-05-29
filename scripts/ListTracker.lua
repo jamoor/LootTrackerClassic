@@ -23,7 +23,7 @@ function ListTracker:initializeTracker(zoneName, listData)
     -- reuse or initialize frame holding the list
     ListTracker.trackerFrame = ListTracker.trackerFrame or CreateFrame("Frame", "BossList", UIParent)
     local tracker = ListTracker.trackerFrame
-    tracker:SetPoint("CENTER", UIParent, "CENTER", 200, 200)
+    tracker:SetPoint("CENTER", UIParent, "CENTER", 200, 100)
 
     -- reuse or initialize list of bosses
     tracker.bossesList = tracker.bossesList or {}
@@ -53,9 +53,9 @@ function ListTracker:initializeTracker(zoneName, listData)
     end
 
     -- After finished configuring the list, hide any remaining cached
-    -- cells as 
+    -- cells as we have no data to insert
     for index = table.getn(listData) + 1, table.getn(bossesList), 1 do
-        bossesList[index].hide()
+        bossesList[index]:hide()
     end
 
     -- Remove the extra margin at the end of the frame
